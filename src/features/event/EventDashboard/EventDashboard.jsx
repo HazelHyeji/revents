@@ -122,7 +122,7 @@ class EventDashboard extends Component {
 
   render() {
     const {selectedEvent} = this.state;
-    return (
+    return ( 
       <Grid>
         <Grid.Column width={10}>
           <EventList deleteEvent={this.handleDeleteEvent} events={this.state.events} onEventOpen={this.handleOpenEvent} />
