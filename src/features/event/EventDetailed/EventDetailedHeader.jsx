@@ -1,6 +1,6 @@
 import React from 'react';
 import { Segment, Image, Item, Header, Button } from 'semantic-ui-react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 const eventImageStyle = {
     filter: 'brightness(30%)'
@@ -19,10 +19,10 @@ const EventDetailedHeader = ({event}) => {
   return (
     <Segment.Group>
       <Segment basic attached="top" style={{ padding: '0' }}>
-        <Image src={`/assets/categoryImages/${event.category}.jpg`} fluid style={eventImageStyle}/>
+        <Image src={`/assets/categoryImages/${event.category}.jpg`} fluid style={eventImageStyle} />
 
         <Segment basic style={eventImageTextStyle}>
-          <Item.Group>
+        <Item.Group>
             <Item>
               <Item.Content>
                 <Header
