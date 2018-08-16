@@ -3,9 +3,9 @@ import React from 'react'
 const PeopleDashboard = () => {
   return (
     <div>
-      This is PeopleDashboard
+      <h1>People Dashboard</h1>
     </div>
   )
 }
 
-export default PeopleDashboard;
+export default PeopleDashboard
