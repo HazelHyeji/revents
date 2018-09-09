@@ -1,4 +1,4 @@
-import {toastr} from 'react-redux-toastr';
+import { toastr } from 'react-redux-toastr'
 import {
   CREATE_EVENT,
   DELETE_EVENT,
@@ -30,7 +30,7 @@ export const createEvent = event => {
       });
       toastr.success('Success', 'Event has been created')
     } catch (error) {
-      toastr.error('Ooops', 'something went wrong')
+      toastr.error('Oops', 'Something went wrong')
     }
   };
 };
@@ -46,7 +46,7 @@ export const updateEvent = event => {
       });
       toastr.success('Success', 'Event has been updated')
     } catch (error) {
-      toastr.error('Ooops', 'something went wrong')
+      toastr.error('Oops', 'Something went wrong')
     }
   };
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import ReduxToastr from 'react-redux-toastr';
+import ReduxToastr from 'react-redux-toastr'
 import 'semantic-ui-css/semantic.min.css';
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css';
 import './index.css';
@@ -10,10 +10,8 @@ import App from './app/layout/App';
 import registerServiceWorker from './registerServiceWorker';
 import { configureStore } from './app/store/configureStore';
 import ScrollToTop from './app/common/util/ScrollToTop';
-import { loadEvents } from './features/event/eventActions'
 
 const store = configureStore();
-store.dispatch(loadEvents())
 
 const rootEl = document.getElementById('root');
 
@@ -41,6 +39,8 @@ if (module.hot) {
   });
 }
 
-render();
+store.firebaseAuthIsReady.then(() => {
+  render();
+  registerServiceWorker();
+})
 
-registerServiceWorker();
