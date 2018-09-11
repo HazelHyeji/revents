@@ -8,7 +8,7 @@ import PhotosPage from './PhotosPage';
 import AccountPage from './AccountPage';
 import BasicPage from './BasicPage';
 import { updatePassword } from '../../auth/authActions';
-import { updateProfile } from '../UserDetailed/userActions';
+import { updateProfile } from '../userActions'
 
 const actions = {
   updatePassword,
@@ -26,8 +26,8 @@ const SettingsDashboard = ({ updatePassword, providerId, user, updateProfile }) 
       <Grid.Column width={12}>
         <Switch>
           <Redirect exact from="/settings" to="/settings/basic" />
-          <Route path="/settings/basic" render={()=> <BasicPage updateProfile={updateProfile} initialValues={user}/>} />
-          <Route path="/settings/about" render={()=> <AboutPage updateProfile={updateProfile} initialValues={user}/>} />
+          <Route path="/settings/basic" render={() => <BasicPage updateProfile={updateProfile} initialValues={user}/>} />
+          <Route path="/settings/about" render={() => <AboutPage updateProfile={updateProfile} initialValues={user}/>} />
           <Route path="/settings/photos" component={PhotosPage} />
           <Route
             path="/settings/account"
